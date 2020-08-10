@@ -27,3 +27,51 @@ title.addEventListener("mouseover", superEventHandler.mouseOver);
 title.addEventListener("mouseleave", superEventHandler.mouseLeft);
 window.addEventListener("resize", superEventHandler.handleResized);
 window.addEventListener("contextmenu", superEventHandler.rightClick);
+
+const midtitle = document.querySelector("#midtitle");
+
+// const BASE_COLOR = "rgb(127, 140, 141)";
+// const OTHER_COLOR = "rgb(22, 160, 133)";
+
+// function clickMidTitle() {
+//   const CURRENT_COLOR = midtitle.style.color;
+//   if (CURRENT_COLOR === BASE_COLOR) {
+//     midtitle.style.color = OTHER_COLOR;
+//   } else {
+//     midtitle.style.color = BASE_COLOR;
+//   }
+// }
+
+// function init() {
+//   midtitle.style.color = BASE_COLOR;
+//   midtitle.addEventListener("click", clickMidTitle);
+// }
+
+// init();
+
+const CLICKED_CLASS = "clicked";
+
+// function handleClick() {
+//   const currentClass = midtitle.className;
+//   if (currentClass !== CLICKED_CLASS) {
+//     midtitle.className = CLICKED_CLASS;
+//   } else {
+//     midtitle.className = " ";
+//   }
+// }
+
+// function handleClick() {
+//   const hasClass = midtitle.classList.contains(CLICKED_CLASS);
+
+//   if (hasClass) {
+//     midtitle.classList.remove(CLICKED_CLASS);
+//   } else {
+//     midtitle.classList.add(CLICKED_CLASS);
+//   }
+// }
+
+function handleClick() {
+  midtitle.classList.toggle(CLICKED_CLASS);
+}
+
+midtitle.addEventListener("click", handleClick);

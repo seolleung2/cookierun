@@ -18,6 +18,7 @@
     />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
     <link
       rel="shortcut icon"
       sizes="16*16 32*32 64*64"
@@ -30,6 +31,9 @@
       <h1 id="title">
         쿠키런 오븐브레이크 팬페이지에 오셨네요!😘😍
       </h1>
+      <div class="js-clock">
+        <h1>00:00:00</h1>
+      </div>
       <div class="signin">
         <form>
           <div class="username">
@@ -62,13 +66,17 @@
     </nav>
     <main>
       <section>
-        <h2>쿠키런 소개</h2>
+        <h2 id="midtitle" class="btn">쿠키런 소개</h2>
         <div class="intro-img">
           <img
             src="https://static-cdn.jtvnw.net/ttv-boxart/Cookie%20Run%3A%20OvenBreak.jpg"
             width="300px;"
           />
         </div>
+        <form class="js-form form">
+          <input type="text" placeholder="welcome" />
+        </form>
+        <h2 class="js-greetings greetings"></h2>
         <p>
           <strong>데브시스터즈</strong>에서 제작한 모바일 러닝 액션게임이다.
           마녀의 오븐에서 탈출한 쿠키들과 함께 모험을 떠나는 게임으로, 점프와
@@ -125,5 +133,7 @@
       >
     </footer>
     <script src="script.js"></script>
+    <script src="clock.js"></script>
+    <script src="greeting.js"></script>
   </body>
 </html>
